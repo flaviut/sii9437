@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project version="2G - 1.7.8" name="sii9437_rx_nuc123_coos">
+  <Target name="CoOS_Nu123" isCurrent="1">
+    <Device manufacturerId="8" manufacturerName="Nuvoton" chipId="448" chipName="NUC123ZD4AN0" boardId="" boardName=""/>
+    <BuildOption>
+      <Compile>
+        <Option name="OptimizationLevel" value="1"/>
+        <Option name="UseFPU" value="0"/>
+        <Option name="UserEditCompiler" value="-Werror"/>
+        <Option name="SupportCPlusplus" value="0"/>
+        <Includepaths>
+          <Includepath path="."/>
+          <Includepath path="../../../driver/api"/>
+          <Includepath path="../../../driver/sii9437"/>
+          <Includepath path="../../../driver/internal"/>
+          <Includepath path="../../../driver/internal/cra"/>
+          <Includepath path="../../../driver/internal/debug"/>
+          <Includepath path="../../../driver/internal/log"/>
+          <Includepath path="../../../driver/internal/malloc"/>
+          <Includepath path="../../../driver/internal/obj"/>
+          <Includepath path="../../../driver/internal/time"/>
+          <Includepath path="../../../driver"/>
+          <Includepath path="../../../driver/internal/assert"/>
+          <Includepath path="../../../driver/internal/pipe"/>
+        </Includepaths>
+        <DefinedSymbols>
+          <Define name="NUC123ZD4AN0"/>
+          <Define name="SII_WORKAROUND_I2C"/>
+          <Define name="SII_DEBUG_USB_VCOM"/>
+        </DefinedSymbols>
+      </Compile>
+      <Link useDefault="0">
+        <Option name="DiscardUnusedSection" value="0"/>
+        <Option name="UserEditLinkder" value=""/>
+        <Option name="UseMemoryLayout" value="1"/>
+        <Option name="nostartfiles" value="0"/>
+        <Option name="LTO" value="0"/>
+        <Option name="IsNewStartupCode" value="1"/>
+        <Option name="Library" value="Not use C Library"/>
+        <Option name="UserEditLinker" value=""/>
+        <LinkedLibraries/>
+        <MemoryAreas debugInFlashNotRAM="1">
+          <Memory name="IROM1" type="ReadOnly" size="0x00010000" startValue="0x00000000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x00005000" startValue="0x20000000"/>
+          <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
+          <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
+        </MemoryAreas>
+        <LocateLinkFile path="../../../../../../../../../../../../coocox/coide/configuration/programdata/sii9437_rx_nuc123_coos/arm-gcc-link.ld" type="0"/>
+      </Link>
+      <Output>
+        <Option name="OutputFileType" value="0"/>
+        <Option name="Path" value="bin/"/>
+        <Option name="Name" value="sii9437_rx_nuc123_coos"/>
+        <Option name="HEX" value="0"/>
+        <Option name="BIN" value="1"/>
+      </Output>
+      <User>
+        <UserRun name="Run#1" type="Before" checked="1" value="${project.path}/../../../../../../Scripts/checkpatch_CoIDE.sh ${project.path}"/>
+        <UserRun name="Run#1" type="After" checked="0" value=""/>
+        <UserRun name="Run#2" type="Before" checked="1" value="${project.path}\checkpatch_report.txt"/>
+      </User>
+    </BuildOption>
+    <DebugOption>
+      <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="Nu-Link"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="SWD"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="1M"/>
+      <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="SYSRESETREQ"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2009"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="NUC1xx_64.elf"/>
+    </DebugOption>
+    <ExcludeFile/>
+  </Target>
+  <Components path="./">
+    <Component id="30" name="C Library" path="" type="2"/>
+    <Component id="31" name="Retarget printf" path="" type="2"/>
+    <Component id="46" name="M0 Cmsis Core" path="" type="2"/>
+    <Component id="47" name="CooCox OS" path="" type="2"/>
+    <Component id="941" name="SYS" path="" type="2"/>
+    <Component id="942" name="GPIO" path="" type="2"/>
+    <Component id="945" name="FMC" path="" type="2"/>
+    <Component id="946" name="I2C" path="" type="2"/>
+    <Component id="952" name="TIMER" path="" type="2"/>
+    <Component id="953" name="UART" path="" type="2"/>
+    <Component id="954" name="USB" path="" type="2"/>
+    <Component id="955" name="WWDT" path="" type="2"/>
+    <Component id="956" name="WDT" path="" type="2"/>
+    <Component id="1384" name="StartUp" path="" type="2"/>
+    <Component id="2082" name="CMSIS Boost" path="" type="2"/>
+  </Components>
+  <Files>
+    <File name="NUC123_Platform/CoOs/kernel/OsMutex.h" path="../../../system/nuc123_coos/CoOS/kernel/OsMutex.h" type="1"/>
+    <File name="NUC123_Platform/CMSIS_Boot/Start_Up" path="" type="2"/>
+    <File name="NUC123_Platform/cmsis_lib/source/DrvUSB.c" path="../../../system/nuc123_coos/cmsis_lib/source/DrvUSB.c" type="1"/>
+    <File name="NUC123_Platform/CoOs/kernel/OsTime.h" path="../../../system/nuc123_coos/CoOS/kernel/OsTime.h" type="1"/>
+    <File name="NUC123_Platform/com_interface.h" path="../../../system/nuc123_coos/com_interface.h" type="1"/>
+    <File name="NUC123_Platform/CoOs/kernel/hook.c" path="../../../system/nuc123_coos/CoOS/kernel/hook.c" type="1"/>
+    <File name="NUC123_Platform/cmsis_lib/include/CLOCK.h" path="../../../system/nuc123_coos/cmsis_lib/include/CLOCK.h" type="1"/>
+    <File name="NUC123_Platform/cmsis_lib/source/DrvFMC.c" path="../../../system/nuc123_coos/cmsis_lib/source/DrvFMC.c" type="1"/>
+    <File name="Driver/Sii9612/Src" path="" type="2"/>
+    <File name="NUC123_Platform/CoOs/kernel/OsKernelHeap.h" path="../../../system/nuc123_coos/CoOS/kernel/OsKernelHeap.h" type="1"/>
+    <File name="NUC123_Platform/cmsis_core/core_cmInstr.h" path="../../../system/nuc123_coos/cmsis_core/core_cmInstr.h" type="1"/>
+    <File name="NUC123_Platform/cmsis_lib/source/DrvUART.c" path="../../../system/nuc123_coos/cmsis_lib/source/DrvUART.c" type="1"/>
+    <File name="Application/sii_datatypes.h" path="sii_datatypes.h" type="1"/>
+    <File name="NUC123_Platform/cmsis_lib" path="" type="2"/>
+    <File name="NUC123_Platform/CoOs/kernel/OsQueue.h" path="../../../system/nuc123_coos/CoOS/kernel/OsQueue.h" type="1"/>
+    <File name="NUC123_Platform/cmsis_lib/include/UART.h" path="../../../system/nuc123_coos/cmsis_lib/include/UART.h" type="1"/>
+    <File name="Driver/Internal/pipe" path="" type="2"/>
+    <File name="Driver/Internal/malloc/sii_sys_malloc.c" path="../../../driver/internal/malloc/sii_sys_malloc.c" type="1"/>
+    <File name="NUC123_Platform/syscalls/syscalls.c" path="../../../system/nuc123_coos/syscalls/syscalls.c" type="1"/>
+    <File name="Driver" path="" type="2"/>
+    <File name="NUC123_Platform/CoOs/kernel/OsError.h" path="../../../system/nuc123_coos/CoOS/kernel/OsError.h" type="1"/>
+    <File name="NUC123_Platform/CoOs/kernel/OsServiceReq.h" path="../../../system/nuc123_coos/CoOS/kernel/OsServiceReq.h" type="1"/>
+    <File name="NUC123_Platform/stdio/printf.c" path="../../../system/nuc123_coos/stdio/printf.c" type="1"/>
+    <File name="Driver/Internal/log/sii_sys_log_api.h" path="../../../driver/internal/log/sii_sys_log_api.h" type="1"/>
+    <File name="Driver/Sii9612/Inc/sii9612_drv_api.h" path="../../../driver/sii9612/sii9612_drv_api.h" type="1"/>
+    <File name="Driver/Internal/aud/si_drv_aud_api.h" path="../../../driver/sii9612/aud/si_drv_aud_api.h" type="1"/>
+    <File name="NUC123_Platform/CoOs/portable/GCC/port.c" path="../../../system/nuc123_coos/CoOS/portable/GCC/port.c" type="1"/>
+    <File name="Driver/Sii9612/Inc" path="" type="2"/>
+    <File name="NUC123_Platform/CoOs/kernel/core.c" path="../../../system/nuc123_coos/CoOS/kernel/core.c" type="1"/>
+    <File name="NUC123_Platform/cmsis_lib/include/GPIO.h" path="../../../system/nuc123_coos/cmsis_lib/include/GPIO.h" type="1"/>
+    <File name="NUC123_Platform/Application/RomData.c" path="../../../system/nuc123_coos/Application/RomData.c" type="1"/>
+    <File name="NUC123_Platform/NUC123Series/NUC123Series.h" path="../../../system/nuc123_coos/NUC123Series/NUC123Series.h" type="1"/>
+    <File name="NUC123_Platform/Application/Host_Core.c" path="../../../system/nuc123_coos/Application/Host_Core.c" type="1"/>
+    <File name="NUC123_Platform/Include/Host/Host_Core.h" path="../../../system/nuc123_coos/Include/Host/Host_Core.h" type="1"/>
+    <File name="Driver/Internal/cra" path="" type="2"/>
+    <File name="Driver/Internal/edid" path="" type="2"/>
+    <File name="NUC123_Platform/cmsis_lib/include" path="" type="2"/>
+    <File name="NUC123_Platform/Library/LibTimer.c" path="../../../system/nuc123_coos/Library/LibTimer.c" type="1"/>
+    <File name="NUC123_Platform/cmsis_lib/include/TIMER.h" path="../../../system/nuc123_coos/cmsis_lib/include/TIMER.h" type="1"/>
+    <File name="Driver/Internal/edid/si_lib_edid_api.h" path="../../../driver/sii9612/edid/si_lib_edid_api.h" type="1"/>
+    <File name="Driver/Sii9612/Inc/sii9612_reg_cec.h" path="../../../driver/sii9612/cec/sii9612_reg_cec.h" type="1"/>
+    <File name="NUC123_Platform/CoOs/kernel/event.c" path="../../../system/nuc123_coos/CoOS/kernel/event.c" type="1"/>
+    <File name="Driver/Internal/malloc/sii_sys_malloc_api.h" path="../../../driver/internal/malloc/sii_sys_malloc_api.h" type="1"/>
+    <File name="NUC123_Platform/Include/Library" path="" type="2"/>
+    <File name="NUC123_Platform/CoOs/kernel/flag.c" path="../../../system/nuc123_coos/CoOS/kernel/flag.c" type="1"/>
+    <File name="Driver/Sii9612/Src/sii9612_drv_cec.c" path="../../../driver/sii9612/cec/sii9612_drv_cec.c" type="1"/>
+    <File name="Application/sii9437_example.h" path="sii9437_example.h" type="1"/>
+    <File name="NUC123_Platform/NUC123Series/system_NUC123Series.h" path="../../../system/nuc123_coos/NUC123Series/system_NUC123Series.h" type="1"/>
+    <File name="Driver/Internal/aud" path="" type="2"/>
+    <File name="NUC123_Platform/CoOs/kernel/OsConfig.h" path="../../../system/nuc123_coos/CoOS/kernel/OsConfig.h" type="1"/>
+    <File name="NUC123_Platform/cmsis_lib/source/DrvTimer.c" path="../../../system/nuc123_coos/cmsis_lib/source/DrvTimer.c" type="1"/>
+    <File name="Driver/Internal/log" path="" type="2"/>
+    <File name="NUC123_Platform/cmsis_lib/include/DrvTIMER.h" path="../../../system/nuc123_coos/cmsis_lib/include/DrvTIMER.h" type="1"/>
+    <File name="NUC123_Platform/Include/System/ModuleID.h" path="../../../system/nuc123_coos/Include/System/ModuleID.h" type="1"/>
+    <File name="NUC123_Platform/cmsis_core" path="" type="2"/>
+    <File name="NUC123_Platform/stdio/printf.h" path="../../../system/nuc123_coos/stdio/printf.h" type="1"/>
+    <File name="Driver/Sii9612/Inc/sii_api_wrap.h" path="../../../driver/sii9612/sii_api_wrap.h" type="1"/>
+    <File name="Driver/Internal/obj/sii_sys_obj_api.h" path="../../../driver/internal/obj/sii_sys_obj_api.h" type="1"/>
+    <File name="Driver/Sii9612/Src/sii9612_drv_tpg.c" path="../../../driver/sii9612/sii9612_drv_tpg.c" type="1"/>
+    <File name="NUC123_Platform/CoOs/kernel/OsEvent.h" path="../../../system/nuc123_coos/CoOS/kernel/OsEvent.h" type="1"/>
+    <File name="NUC123_Platform/CoOs/portable/GCC" path="" type="2"/>
+    <File name="NUC123_Platform/cmsis_lib/include/DrvUSB.h" path="../../../system/nuc123_coos/cmsis_lib/include/DrvUSB.h" type="1"/>
+    <File name="NUC123_Platform/Include/System" path="" type="2"/>
+    <File name="Driver/Sii9437/Inc/sii9437_drv.h" path="../../../driver/sii9437/sii9437_drv.h" type="1"/>
+    <File name="NUC123_Platform/CoOs/portable" path="" type="2"/>
+    <File name="NUC123_Platform/CMSIS_Boot" path="" type="2"/>
+    <File name="NUC123_Platform/CoOs/portable/OsArch.h" path="../../../system/nuc123_coos/CoOS/portable/OsArch.h" type="1"/>
+    <File name="NUC123_Platform/CoOs/kernel/OsCore.h" path="../../../system/nuc123_coos/CoOS/kernel/OsCore.h" type="1"/>
+    <File name="NUC123_Platform/Application/UART.c" path="../../../system/nuc123_coos/Application/UART.c" type="1"/>
+    <File name="NUC123_Platform/CoOs/kernel/mm.c" path="../../../system/nuc123_coos/CoOS/kernel/mm.c" type="1"/>
+    <File name="NUC123_Platform/Include/Host/Host_Build_Info.h" path="../../../system/nuc123_coos/Include/Host/Host_Build_Info.h" type="1"/>
+    <File name="NUC123_Platform/CoOs/kernel/utility.h" path="../../../system/nuc123_coos/CoOS/kernel/utility.h" type="1"/>
+    <File name="NUC123_Platform/cmsis_lib/include/WWDT.h" path="../../../system/nuc123_coos/cmsis_lib/include/WWDT.h" type="1"/>
+    <File name="Driver/Internal/obj" path="" type="2"/>
+    <File name="NUC123_Platform/cmsis_lib/source/DrvI2C.c" path="../../../system/nuc123_coos/cmsis_lib/source/DrvI2C.c" type="1"/>
+    <File name="NUC123_Platform/cmsis_lib/source" path="" type="2"/>
+    <File name="NUC123_Platform/com_interface.c" path="../../../system/nuc123_coos/com_interface.c" type="1"/>
+    <File name="NUC123_Platform/cmsis_core/core_cmFunc.h" path="../../../system/nuc123_coos/cmsis_core/core_cmFunc.h" type="1"/>
+    <File name="NUC123_Platform/Include" path="" type="2"/>
+    <File name="Driver/Internal/malloc" path="" type="2"/>
+    <File name="NUC123_Platform/CoOs/kernel/CoOS.h" path="../../../system/nuc123_coos/CoOS/kernel/CoOS.h" type="1"/>
+    <File name="NUC123_Platform/Library/LibRingBuf.c" path="../../../system/nuc123_coos/Library/LibRingBuf.c" type="1"/>
+    <File name="NUC123_Platform/cmsis_core/core_cm0.h" path="../../../system/nuc123_coos/cmsis_core/core_cm0.h" type="1"/>
+    <File name="Application/sii_platform_api.h" path="../../../platform/sii_platform_api.h" type="1"/>
+    <File name="NUC123_Platform/CoOs/kernel/task.c" path="../../../system/nuc123_coos/CoOS/kernel/task.c" type="1"/>
+    <File name="NUC123_Platform/CoOs/kernel/mbox.c" path="../../../system/nuc123_coos/CoOS/kernel/mbox.c" type="1"/>
+    <File name="Driver/Internal/cra/sii_drv_cra_api.h" path="../../../driver/internal/cra/sii_drv_cra_api.h" type="1"/>
+    <File name="Driver/Sii9437/Inc/sii9437_regs.h" path="../../../driver/sii9437/sii9437_regs.h" type="1"/>
+    <File name="NUC123_Platform/cmsis_lib/include/I2C.h" path="../../../system/nuc123_coos/cmsis_lib/include/I2C.h" type="1"/>
+    <File name="NUC123_Platform/Application/I2C_MASTER.c" path="../../../system/nuc123_coos/Application/I2C_MASTER.c" type="1"/>
+    <File name="NUC123_Platform/Include/Library/LibRingBuf.h" path="../../../system/nuc123_coos/Include/Library/LibRingBuf.h" type="1"/>
+    <File name="NUC123_Platform/Include/Host" path="" type="2"/>
+    <File name="Driver/Internal/sii_system_api.h" path="../../../driver/internal/sii_system_api.h" type="1"/>
+    <File name="Driver/Internal/sii_lib_data.h" path="../../../driver/internal/sii_lib_data.h" type="1"/>
+    <File name="NUC123_Platform/cmsis_lib/include/SYS.h" path="../../../system/nuc123_coos/cmsis_lib/include/SYS.h" type="1"/>
+    <File name="NUC123_Platform/Include/Host/Host_Common.h" path="../../../system/nuc123_coos/Include/Host/Host_Common.h" type="1"/>
+    <File name="Driver/Internal/time/sii_sys_time.c" path="../../../driver/internal/time/sii_sys_time.c" type="1"/>
+    <File name="NUC123_Platform/CoOs/kernel/mutex.c" path="../../../system/nuc123_coos/CoOS/kernel/mutex.c" type="1"/>
+    <File name="NUC123_Platform/CoOs" path="" type="2"/>
+    <File name="NUC123_Platform/CoOs/kernel/time.c" path="../../../system/nuc123_coos/CoOS/kernel/time.c" type="1"/>
+    <File name="NUC123_Platform/cmsis_lib/include/WDT.h" path="../../../system/nuc123_coos/cmsis_lib/include/WDT.h" type="1"/>
+    <File name="Application/sii9437_example.c" path="sii9437_example.c" type="1"/>
+    <File name="NUC123_Platform/CoOs/kernel/serviceReq.c" path="../../../system/nuc123_coos/CoOS/kernel/serviceReq.c" type="1"/>
+    <File name="Driver/Internal/time/sii_sys_time_api.h" path="../../../driver/internal/time/sii_sys_time_api.h" type="1"/>
+    <File name="Application/sii943x_user_def.h" path="sii943x_user_def.h" type="1"/>
+    <File name="NUC123_Platform/CoOs/portable/arch.c" path="../../../system/nuc123_coos/CoOS/portable/arch.c" type="1"/>
+    <File name="Driver/Internal/pipe/sii_lib_pipe_api.h" path="../../../driver/internal/pipe/sii_lib_pipe_api.h" type="1"/>
+    <File name="NUC123_Platform/CoOs/kernel/OsMM.h" path="../../../system/nuc123_coos/CoOS/kernel/OsMM.h" type="1"/>
+    <File name="Driver/Sii9612/Inc/sii943x_func.h" path="../../../driver/sii9612/api/sii943x_func.h" type="1"/>
+    <File name="Driver/Internal/log/sii_sys_log.c" path="../../../driver/internal/log/sii_sys_log.c" type="1"/>
+    <File name="NUC123_Platform/NUC123Series" path="" type="2"/>
+    <File name="Driver/Sii9437" path="" type="2"/>
+    <File name="Driver/Sii9437/Src/sii9437_hal.c" path="../../../driver/sii9437/sii9437_hal.c" type="1"/>
+    <File name="Driver/Sii9437/Inc" path="" type="2"/>
+    <File name="NUC123_Platform/Library" path="" type="2"/>
+    <File name="NUC123_Platform/Include/Application/Vcom_Data_Proc.h" path="../../../system/nuc123_coos/Include/Application/Vcom_Data_Proc.h" type="1"/>
+    <File name="NUC123_Platform/Include/Application" path="" type="2"/>
+    <File name="Application/sii_platform_api.c" path="../../../platform/nuc123_coos/sii_platform_api.c" type="1"/>
+    <File name="Application" path="" type="2"/>
+    <File name="NUC123_Platform/CoOs/kernel/OsFlag.h" path="../../../system/nuc123_coos/CoOS/kernel/OsFlag.h" type="1"/>
+    <File name="NUC123_Platform/Include/Library/LibTimer.h" path="../../../system/nuc123_coos/Include/Library/LibTimer.h" type="1"/>
+    <File name="NUC123_Platform/CoOs/kernel/kernelHeap.c" path="../../../system/nuc123_coos/CoOS/kernel/kernelHeap.c" type="1"/>
+    <File name="NUC123_Platform/CoOs/kernel/OsTimer.h" path="../../../system/nuc123_coos/CoOS/kernel/OsTimer.h" type="1"/>
+    <File name="NUC123_Platform/CoOs/kernel/OsTask.h" path="../../../system/nuc123_coos/CoOS/kernel/OsTask.h" type="1"/>
+    <File name="Driver/Internal/assert" path="" type="2"/>
+    <File name="NUC123_Platform/stdio" path="" type="2"/>
+    <File name="NUC123_Platform/Include/USB" path="" type="2"/>
+    <File name="NUC123_Platform/CoOs/kernel/utility.c" path="../../../system/nuc123_coos/CoOS/kernel/utility.c" type="1"/>
+    <File name="NUC123_Platform/NUC123Series/system_NUC123Series.c" path="../../../system/nuc123_coos/NUC123Series/system_NUC123Series.c" type="1"/>
+    <File name="NUC123_Platform/syscalls" path="" type="2"/>
+    <File name="NUC123_Platform/cmsis_lib/include/USB.h" path="../../../system/nuc123_coos/cmsis_lib/include/USB.h" type="1"/>
+    <File name="Driver/Internal/time" path="" type="2"/>
+    <File name="Driver/Sii9612" path="" type="2"/>
+    <File name="Driver/Internal/pipe/sii_lib_pipe.c" path="../../../driver/internal/pipe/sii_lib_pipe.c" type="1"/>
+    <File name="NUC123_Platform/Application/VCOMSys.c" path="../../../system/nuc123_coos/Application/VCOMSys.c" type="1"/>
+    <File name="Driver/Sii9437/Src" path="" type="2"/>
+    <File name="NUC123_Platform/CMSIS_Boot/system_NUC123.h" path="../../../system/nuc123_coos/CMSIS_Boot/system_NUC123.h" type="1"/>
+    <File name="Driver/Internal/assert/sii_sys_assert.c" path="../../../driver/internal/assert/sii_sys_assert.c" type="1"/>
+    <File name="Driver/Sii9612/Inc/sii9612_drv_cec_api.h" path="../../../driver/sii9612/cec/sii9612_drv_cec_api.h" type="1"/>
+    <File name="NUC123_Platform/Include/USB/VCOMSys.h" path="../../../system/nuc123_coos/Include/USB/VCOMSys.h" type="1"/>
+    <File name="NUC123_Platform/Include/Application/RomData.h" path="../../../system/nuc123_coos/Include/Application/RomData.h" type="1"/>
+    <File name="NUC123_Platform/CoOs/kernel/sem.c" path="../../../system/nuc123_coos/CoOS/kernel/sem.c" type="1"/>
+    <File name="Driver/Internal/seq/sii_sys_seq_api.h" path="../../../driver/internal/seq/sii_sys_seq_api.h" type="1"/>
+    <File name="NUC123_Platform/CoOs/kernel" path="" type="2"/>
+    <File name="NUC123_Platform/Application/Vcom_Data_Proc.c" path="../../../system/nuc123_coos/Application/Vcom_Data_Proc.c" type="1"/>
+    <File name="NUC123_Platform/cmsis_lib/include/FMC.h" path="../../../system/nuc123_coos/cmsis_lib/include/FMC.h" type="1"/>
+    <File name="NUC123_Platform/Include/System/SysInfra.h" path="../../../system/nuc123_coos/Include/System/SysInfra.h" type="1"/>
+    <File name="Driver/Internal/obj/sii_sys_obj.c" path="../../../driver/internal/obj/sii_sys_obj.c" type="1"/>
+    <File name="Driver/Sii9437/Src/sii9437_drv.c" path="../../../driver/sii9437/sii9437_drv.c" type="1"/>
+    <File name="NUC123_Platform/Application" path="" type="2"/>
+    <File name="Driver/Internal/cra/sii_drv_cra.c" path="../../../driver/internal/cra/sii_drv_cra.c" type="1"/>
+    <File name="NUC123_Platform" path="" type="2"/>
+    <File name="Driver/Internal/seq/sii_sys_seq.c" path="../../../driver/internal/seq/sii_sys_seq.c" type="1"/>
+    <File name="NUC123_Platform/CoOs/kernel/queue.c" path="../../../system/nuc123_coos/CoOS/kernel/queue.c" type="1"/>
+    <File name="Driver/Sii9437/Inc/sii9437_version.h" path="../../../driver/sii9437/sii9437_version.h" type="1"/>
+    <File name="Driver/Sii9612/Src/sii9612_drv_tx.c" path="../../../driver/sii9612/sii9612_drv_tx.c" type="1"/>
+    <File name="NUC123_Platform/cmsis_lib/source/DrvSYS.c" path="../../../system/nuc123_coos/cmsis_lib/source/DrvSYS.c" type="1"/>
+    <File name="NUC123_Platform/CMSIS_Boot/system_NUC123.c" path="../../../system/nuc123_coos/CMSIS_Boot/system_NUC123.c" type="1"/>
+    <File name="NUC123_Platform/CMSIS_Boot/Start_Up/startup_coide.c" path="../../../system/nuc123_coos/CMSIS_Boot/Start_UP/startup_coide.c" type="1"/>
+    <File name="Driver/Sii9437/Inc/sii9437_api.h" path="../../../driver/sii9437/sii9437_api.h" type="1"/>
+    <File name="NUC123_Platform/CoOs/kernel/timer.c" path="../../../system/nuc123_coos/CoOS/kernel/timer.c" type="1"/>
+    <File name="Driver/Internal/assert/sii_sys_assert_api.h" path="../../../driver/internal/assert/sii_sys_assert_api.h" type="1"/>
+    <File name="NUC123_Platform/Include/Application/I2C_MASTER.h" path="../../../system/nuc123_coos/Include/Application/I2C_MASTER.h" type="1"/>
+    <File name="Driver/Internal" path="" type="2"/>
+    <File name="Driver/Sii9612/Inc/sii9612_drv_tpg_api.h" path="../../../driver/sii9612/sii9612_drv_tpg_api.h" type="1"/>
+    <File name="Driver/Internal/edid/si_lib_edid.c" path="../../../driver/sii9612/edid/si_lib_edid.c" type="1"/>
+    <File name="NUC123_Platform/CMSIS_Boot/NUC123.h" path="../../../system/nuc123_coos/CMSIS_Boot/NUC123.h" type="1"/>
+    <File name="NUC123_Platform/CoOs/kernel/coocox.h" path="../../../system/nuc123_coos/CoOS/kernel/coocox.h" type="1"/>
+    <File name="Driver/Internal/seq" path="" type="2"/>
+  </Files>
+</Project>
